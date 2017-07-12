@@ -16,7 +16,6 @@ interface IProps {
 function App(props: IProps) {
     return (
         <div>
-            1123
             {props.children}
         </div>
     )
