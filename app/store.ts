@@ -3,20 +3,25 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
 // reducers
-function rootReducer(state={}, action){
-    switch(action.type){
+import productDetail from './modules/ProductDetail/reducer';
+
+function rootReducer(state = {}, action) {
+    switch (action.type) {
         case "Test":
-        return state;
+            return state;
         default:
-        return state;
+            return state;
     }
 }
 
-let store = createStore(rootReducer,
+let store = createStore(combineReducers({
+    rootReducer,
+    productDetail
+}),
     applyMiddleware(thunkMiddleware));
-    
+
 store.subscribe(() => {
-	console.log('store data--->', store.getState());
+    console.log('store data--->', store.getState());
 })
 
 export default store;

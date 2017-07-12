@@ -21,14 +21,14 @@ function App(props: IProps) {
     )
 }
 
-let elem = 
-<Provider store={store}>
-    <Router>
-        <App>
-            <Route path="/" strict component={ProductDetail}></Route>
-        </App>
-    </Router>
-</Provider>
+let elem =
+    <Provider store={store}>
+        <Router>
+            <App>
+                <Route path="/" strict component={ProductDetail}></Route>
+            </App>
+        </Router>
+    </Provider>
 
 render(elem, document.getElementById("main"));
 

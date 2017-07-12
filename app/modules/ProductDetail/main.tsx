@@ -1,18 +1,56 @@
 // libs
 import * as React from 'react';
+import { connect } from 'react-redux';
+// actions
+import * as Actions from './actions';
 // css
 
-interface IProp{
-
+console.log('component', React.Component)
+interface IProps {
+    name?: any;
+    getProductDetail?: Function;
 }
 
-function ProductDetail(props:IProp){
-    return (
-        <div>
-            {13123123}
-        </div>
-    )
+interface IState {
+}
+
+function mapStateToProps(state, ownerProps) {
+    let { productDetail } = state;
+    return productDetail;
+}
+
+function mapDispatchToProps(dispatch, ownerProps) {
+    return {
+        getProductDetail: () => {
+            dispatch(Actions.getProductDetail());
+        }
+    }
+}
+
+class ProductDetail extends React.Component<IProps, IState>{
+    static defaultProps = {
+        name: "monkey-default"
+    };
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            name: 123
+        }
+    }
+    componentDidMount() {
+        let { getProductDetail } = this.props;
+        // getProductDetail();
+    }
+
+    render() {
+        return (
+            <div>
+                {this.props.name}
+            </div>
+        )
+    }
 }
 
 
-export default ProductDetail;
+export default connect(mapStateToProps, mapDispatchToProps)(ProductDetail);
