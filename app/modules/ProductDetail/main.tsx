@@ -1,18 +1,18 @@
 // libs
-import React, {Component} from 'react';
+import * as React from 'react';
 // css
 
 interface IProp{
 
 }
 
-function ProductionDetail(props:IProp){
+function ProductDetail(props:IProp){
     return (
         <div>
-            ProductionDetail
+            {13123123}
         </div>
     )
 }
 
 
-export default ProductionDetail;
+export default ProductDetail;
