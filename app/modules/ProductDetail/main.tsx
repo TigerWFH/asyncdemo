@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import * as Actions from './actions';
 // css
 
-console.log('component', React.Component)
 interface IProps {
     name?: any;
     getProductDetail?: Function;

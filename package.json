@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build-dev": "export NODE_ENV=development && webpack",
+    "build-prd": "export NODE_ENV=production && webpack",
     "server": "webpack-dev-server --progress --colors",
     "mock": "node --version"
   },
