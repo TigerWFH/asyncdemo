@@ -1,4 +1,4 @@
-# AsyncDemo
+# AsyncDemo（目前使用的时静态路由）
 ## 第一步 目录结构
 	AsyncDemo
 	|
