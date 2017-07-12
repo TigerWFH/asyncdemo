@@ -33,7 +33,6 @@ class ProductDetail extends React.Component<IProps, IState>{
     };
     constructor(props) {
         super(props);
-
         this.state = {
             name: 123
         }
