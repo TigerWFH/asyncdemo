@@ -78,6 +78,16 @@ module.exports = {
     ],
     target: "web",
     devServer: {
-
+        contentBase: buildPath,
+        host: '0.0.0.0',
+        port: 8080,
+        compress: true,
+        watchContentBase: true,
+        hot: true,
+        noInfo: true,
+        quiet: true,
+        proxy: {
+            "/v1": "http://locahost:9000"
+        }
     }
 }
