@@ -110,4 +110,43 @@
 
 ## 第二步 npm install
 
-## 第三步 其它
+## 第三步 loaders
+* `储备知识：DataURL，Base64`
+
+	1、DataUrl技术，就是将图片数据以base64形式压缩编码，以字符串形式直接嵌入到目标文件中（html，css），目前大部分主流浏览器都支持。
+	2、Base64编码的数据体积通常是原数据体积的4/3，即比原数据大。
+	3、DateURL形式的图片不会被浏览器缓存。（通过css文件简介缓存DateUrl形式的图片）
+* `file-loader`
+	
+	拷贝图片到指定的位置并返回对应的url或者仅仅返回一个url。[更多资料](https://github.com/webpack-contrib/file-loader)
+	```
+	var url = require("file-loader!./file.png");
+	// => 根据file.png在输出目录emit a file，并返回对应的url
+	//=>"/publick-path/000000000(hash).png"
+	var url = require("file-loader?emitFile=false!./file.png");
+	// not emit a file
+	```
+* `url-loader`
+
+	将指定大小的图片进行base64压缩编码，并返回对应的DataUrl。[更多资料](https://github.com/webpack-contrib/url-loader)
+	```
+	import img from './image.png';
+	```
+	webpack.config.js
+	```
+	{
+		test: /\.(png|jpg|jpeg|gif)$/,
+		use:[
+			{
+				loader: 'url-loader',
+				options: {
+					limit: 8192,
+					mimeType:"文件后缀，imgage/png",
+					prefix:"传递给file-loader的参数"
+				}
+			}
+		]
+	}
+	```
+	`注意：`配置了url-loader后，就不需要安装配置file-loader
+	
