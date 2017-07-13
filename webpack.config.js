@@ -19,7 +19,7 @@ module.exports = {
     entry: path.join(sourcePath, 'main.tsx'),
     output: {
         path: buildPath,
-        filename: "js/[name].js"
+        filename: "bundles/[name].js"
     },
     module: {
         rules: [
@@ -51,7 +51,8 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 800
+                            limit: 8192,
+                            name: 'images/[name]-[hash:8].[ext]'
                         }
                     }
                 ]
@@ -63,7 +64,7 @@ module.exports = {
             "node_modules",
             sourcePath
         ],
-        extensions: [".tsx", ".ts", ".jsx", ".js", ".css",".less",".scss",".json"]
+        extensions: [".tsx", ".ts", ".jsx", ".js", ".css", ".less", ".scss", ".json"]
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
