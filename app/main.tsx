@@ -9,13 +9,16 @@ import ProductDetail from './modules/ProductDetail/main';
 
 import store from './store';
 
+import './main.less';
+
+
 interface IProps {
     children: any
 }
 
 function App(props: IProps) {
     return (
-        <div>
+        <div className="app">
             {props.children}
         </div>
     )

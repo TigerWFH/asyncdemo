@@ -43,7 +43,7 @@ class ProductDetail extends React.Component<IProps, IState>{
 
     render() {
         return (
-            <div>
+            <div className="app">
                 {this.props.name}
             </div>
         )
