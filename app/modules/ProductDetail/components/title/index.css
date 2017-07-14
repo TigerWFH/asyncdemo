@@ -1,0 +1,54 @@
+.sx-heading-wrapper{
+    height: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.sx-heading-title{
+    line-height: 27px;
+    font-family: "PingFang-SC-Medium";
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    margin-bottom: 5px;
+    overflow: scroll;
+}
+
+.sx-heading-subtitle{
+    line-height: 21px;
+    font-family: "PingFang-SC-Medium";
+    font-size: 12px;
+    color: #aaa;
+    text-align: left;
+}
+
+.sx-heading-price{
+    font-size: 12px;
+    text-align: left;
+    overflow: auto;
+    margin-top: 5px;
+}
+.sx-heading-price-symbol{
+    font-size: 15px;
+}
+.sx-heading-price-decimal{
+    font-size: 15px;
+}
+.sx-heading-price-current{
+    line-height: 44px;
+    color: #ff4500;
+    font-size: 24px;
+}
+.sx-heading-price-old{
+    display: inline-block;
+    line-height: 12px;
+    color: #999;
+    text-decoration: line-through;
+    margin-bottom: 13px;
+}
+
+.sx-heading-price-sales-volume{
+    float: right;
+    font-size: 12px;
+    color: #999;
+}
