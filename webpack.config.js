@@ -8,11 +8,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var env = process.env.NODE_ENV === "development" ? "development" : "production";
 var sourcePath = path.join(__dirname, 'app');
-var buildPath = path.join(__dirname, 'static');
+var buildPath = path.join(__dirname, 'build/static');
 
 
 if (env === "production") {
-    buildPath = path.join(__dirname, 'dist')
+    buildPath = path.join(__dirname, 'build/dist')
 }
 
 module.exports = {
@@ -80,7 +80,6 @@ module.exports = {
     target: "web",
     devServer: {
         contentBase: buildPath,
-        host: '0.0.0.0',
         port: 8080,
         compress: true,
         watchContentBase: true,

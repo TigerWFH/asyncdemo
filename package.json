@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-dev": "export NODE_ENV=development && webpack",
     "build-prd": "export NODE_ENV=production && webpack",
-    "server": "webpack-dev-server --progress --colors",
+    "server": "webpack-dev-server --progress --colors --open",
     "mock": "node --version"
   },
   "author": "monkey",
