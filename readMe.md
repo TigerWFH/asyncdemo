@@ -116,6 +116,8 @@
 	1、DataUrl技术，就是将图片数据以base64形式压缩编码，以字符串形式直接嵌入到目标文件中（html，css），目前大部分主流浏览器都支持。
 	2、Base64编码的数据体积通常是原数据体积的4/3，即比原数据大。
 	3、DateURL形式的图片不会被浏览器缓存。（通过css文件简介缓存DateUrl形式的图片）
+	4、webpack只能处理javascript，其它资源需要使用loader进行转换
+	5、loader：
 * `file-loader`
 	
 	拷贝图片到指定的位置并返回对应的url或者仅仅返回一个url。[更多资料](https://github.com/webpack-contrib/file-loader)
@@ -149,4 +151,16 @@
 	}
 	```
 	`注意：`配置了url-loader后，就不需要安装配置file-loader
+* `css-loader`
+
+	css-loader会像解析import/require一样将解析import和url()，并自行处理它们的解析。
+
+	`css-loader并没有将css解析成样式树，而是将它的整个内容作为一个字符串打包进js中。`
+
+	![css-loader](./app/common/res/images/css-loader.jpeg)
+
+	loader会将其它资源打包成js。
+* `style-loader`
+
+	通过注入style标签的形式，讲css添加到dom上。
 	
