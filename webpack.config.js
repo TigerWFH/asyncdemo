@@ -25,12 +25,12 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                include: [sourcePath],
+                include: [sourcePath, "node_modules/banner/src/modules"],
                 use: ['awesome-typescript-loader']
             },
             {
                 test: /\.less$/,
-                include: [sourcePath],
+                include: [sourcePath, "node_modules/banner/src/modules"],
                 use: ExtractTextWebpackPlugin.extract({
                     fallback: 'style-loader',
                     use: [
@@ -46,7 +46,7 @@ module.exports = {
             },
             {
                 test: /\.(jpg|jpeg|png|gif)/,
-                include: [path.join(sourcePath, 'common/images')],
+                include: [path.join(sourcePath, 'common/images'), "node_modules/banner/src/modules"],
                 use: [
                     {
                         loader: 'url-loader',
@@ -74,7 +74,9 @@ module.exports = {
         new ExtractTextWebpackPlugin("css/index.css"),
         new HtmlWebpackPlugin({
             title: "AsyncDemo-Monkey",
-            template: path.join(sourcePath, "index.html")
+            template: path.join(sourcePath, "index.html"),
+            react: '<script src="https://cdn.bootcss.com/react/15.6.1/react.js"></script>',
+            reactDOM: '<script src="https://cdn.bootcss.com/react/15.6.1/react-dom.min.js"></script>'
         })
     ],
     target: "web",

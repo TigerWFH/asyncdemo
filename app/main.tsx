@@ -7,19 +7,22 @@ import { Route, HashRouter as Router, Link } from 'react-router-dom';
 // compoennts
 import ProductDetail from './modules/ProductDetail/main';
 
+import Banner from 'banner';
+
 import store from './store';
 
 import './main.less';
 
 
-interface IProps {
+interface IProps1 {
     children: any
 }
 
-function App(props: IProps) {
+function App(props: IProps1) {
     return (
         <div className="app">
             {props.children}
+            <Banner />
         </div>
     )
 }

@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-dev": "export NODE_ENV=development && webpack",
     "build-prd": "export NODE_ENV=production && webpack",
-    "server": "webpack-dev-server --progress --colors --open",
+    "server": "export NODE_ENV=development && webpack-dev-server --progress --colors --open",
     "mock": "node --version"
   },
   "author": "monkey",
@@ -29,6 +29,7 @@
     "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
+    "banner": "git+ssh://git@github.com/TigerWFH/banner.git",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
