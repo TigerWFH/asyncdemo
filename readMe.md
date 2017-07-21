@@ -174,3 +174,18 @@
 * `extract-text-webpack-plugin`
 * `webpack-md5-hash`
 * `webpack-mainfest-plugin`
+
+## 第四步  npm相关知识
+* `npm run`
+
+	npm run是npm run-script的简写
+	
+	npm内置了两个命令简写即，npm start(=npm run start)和npm test(npm run test)
+
+	npm run会`创建一个shell`，执行指定的命令，并临时将node_modules/.bin加入PATH变量
+* `npm search`
+
+	npm search name,查询包
+* `npm update`
+
+	更新包
