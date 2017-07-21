@@ -164,3 +164,13 @@
 
 	通过注入style标签的形式，讲css添加到dom上。
 	
+# plugins
+* `webpack.optimize.CommonsChunkPlugin`
+* `webpack.ProvidePlugin`
+* `webpack.DefinePlugin`
+* `clean-webpack-plugin`
+* `copy-webpack-plugin`
+* `html-webpack-plugin`
+* `extract-text-webpack-plugin`
+* `webpack-md5-hash`
+* `webpack-mainfest-plugin`
