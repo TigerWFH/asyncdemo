@@ -7,7 +7,7 @@ import { Route, HashRouter as Router, Link } from 'react-router-dom';
 // compoennts
 import ProductDetail from './modules/ProductDetail/main';
 
-import { Banner } from 'banner';
+import { Banner } from 'banner/lib/banner';
 import store from './store';
 
 import './main.less';
@@ -16,6 +16,8 @@ import './main.less';
 interface IProps1 {
     children: any
 }
+
+console.log("Banner--->", Banner);
 
 function App(props: IProps1) {
     return (
