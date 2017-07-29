@@ -7,7 +7,7 @@ import { Route, HashRouter as Router, Link } from 'react-router-dom';
 // compoennts
 import ProductDetail from './modules/ProductDetail/main';
 
-import { Banner } from 'banner/lib/banner';
+import { Banner } from 'banner';
 import store from './store';
 
 import './main.less';
