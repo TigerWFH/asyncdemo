@@ -75,8 +75,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "AsyncDemo-Monkey",
             template: path.join(sourcePath, "index.html"),
-            react: '<script src="https://cdn.bootcss.com/react/15.6.1/react.js"></script>',
-            reactDOM: '<script src="https://cdn.bootcss.com/react/15.6.1/react-dom.min.js"></script>'
+            // react: '<script src="https://cdn.bootcss.com/react/15.6.1/react.js"></script>',
+            // reactDOM: '<script src="https://cdn.bootcss.com/react/15.6.1/react-dom.min.js"></script>'
         })
     ],
     target: "web",
