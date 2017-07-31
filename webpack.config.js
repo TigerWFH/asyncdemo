@@ -5,6 +5,7 @@ const webpack = require('webpack');
 // plugins
 const ExtractTextWebpackPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpacPlugin = require('clean-webpack-plugin');
 
 var env = process.env.NODE_ENV === "development" ? "development" : "production";
 var sourcePath = path.join(__dirname, 'app');
@@ -77,6 +78,9 @@ module.exports = {
             template: path.join(sourcePath, "index.html"),
             // react: '<script src="https://cdn.bootcss.com/react/15.6.1/react.js"></script>',
             // reactDOM: '<script src="https://cdn.bootcss.com/react/15.6.1/react-dom.min.js"></script>'
+        }),
+        new CleanWebpacPlugin(["build"], {
+            root: __dirname
         })
     ],
     target: "web",
